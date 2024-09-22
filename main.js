@@ -3,6 +3,7 @@ import * as THREE from 'three';
 
 const width = globalThis.innerWidth;
 const height = globalThis.innerHeight;
+const flag = document.querySelector("#flag");
 
 const camera = new THREE.PerspectiveCamera( 70, width / height, 0.01, 10 );
 camera.position.z = 1;
@@ -30,13 +31,9 @@ function render(time) {
   mesh.rotation.y = time;
 
   
-  if (`${globalThis.innerHeight}px`!= renderer.domElement.style.height) {
+  if (`${globalThis.innerHeight}px`!= renderer.domElement.style.height && flag.checked) {
    alert(`Window size changed to: ${globalThis.innerHeight}.`)
   }
-  
-  //console.log(renderer.domElement.style.height);
-
-  //console.log(globalThis.innerHeight)
 
 
   renderer.setSize(globalThis.innerWidth, globalThis.innerHeight);
