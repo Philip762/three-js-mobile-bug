@@ -29,6 +29,16 @@ function render(time) {
   mesh.rotation.x = time;
   mesh.rotation.y = time;
 
+  
+  if (`${globalThis.innerHeight}px`!= renderer.domElement.style.height) {
+   alert(`Window size changed to: ${globalThis.innerHeight}.`)
+  }
+  
+  //console.log(renderer.domElement.style.height);
+
+  //console.log(globalThis.innerHeight)
+
+
   renderer.setSize(globalThis.innerWidth, globalThis.innerHeight);
   camera.aspect = canvas.clientWidth / canvas.clientHeight;
   camera.updateProjectionMatrix();
