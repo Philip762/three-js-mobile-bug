@@ -1,0 +1,19 @@
+html, body {
+  color: white;
+  margin: 0;
+}
+
+#back-ground {
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+#app {
+  position: absolute;
+}
+
+.part {
+  height: 500px;
+  border: solid 1px white;
+}
